@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Parametric PV LCA</title>
+</head>
+
+<body>
+  {% extends "template.html" %}
+  {% block content %}
+
+  <div class="content-container">
+    <div class="content">
+      <h5>Photovoltaic Life Cycle Assessment</h5>
+      <div class="side-by-side">
+        <p>Solar panels have emerged as a transformative technology towards decarbonizing the grid and combating climate change. Over the years, significant advancements in solar panel technology have driven remarkable increases in efficiency, affordability, and scalability. However, to fully analyze the potential of photovoltaics in achieving sustainable energy goals, a comprehensive consideration of life cycle assessment is needed. This assessment requires a detailed examination of the embodied impact of PVs, particularly in light of the current carbon budget. </p>
+        <div class="image-container">
+          <img class="image contain" src="/static/calculator_layers.png"></img>
+        </div>
+      </div>
+
+      <h5>Parametric Input</h5>
+      <div class="side-by-side">
+        <p>Currently, the availability of structured and bottom-up life cycle data enabling the analysis and comparison of various configurations of PV panels is limited. This data gap becomes an obstacle for informed decision-making processes when choosing between different options in the field of solar photovoltaics. This tool enables a users to quickly determine the lifecycle impact of different PV devices.</p>
+        <div class="image-container">
+          <img class="image contain" src="/static/calculator_sankey.png"></img>
+        </div>
+      </div>
+
+      <h5>Multitude of Outputs</h5>
+      <div class="side-by-side">
+        <p>A single PV module has a large supply chain, which has far reaching environmental impacts. With this tool we bring the a wider look at the potential environmental impacts of a PV device by looking through the following lenses: Terrestrial acidification, Climate change, Ozone depletion, Human toxicity, Primary energy fossil, Agricultural land use, Photochemical oxidant formation, Metal depletion, Water depletion, Freshwater ecotoxicity, Urban land occupation, Particulate matter formation, Freshwater eutrophication, Natural land transformation, Marine eutrophication, and Ionizing radiation.</p>
+        <div class="image-container">
+          <img class="image contain" src="/static/calculator_outputs.png"></img>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}
+</body>
+
+</html>

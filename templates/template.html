@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An app for morphing EPW and TMY files to account for climate change." />
+    <meta name="keywords" content="climate change, epw, morphing, tmy" />
+    <meta name="author" content="<author>" />
+    <meta name="copyright" content="<author>" />
+    <meta name="robots" content="index" />
+    <meta name="robots" content="follow" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Parametric BIPV LCA</title>
+    <!-- <link rel="icon" type="image/x-icon" href="/static/favicon.ico"> -->
+    <link rel="stylesheet" href="{{ url_for('static',     filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',     filename='css/skeleton.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',     filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-logo">
+            <h2 id="main-logo">PV LCA Calculator</h2>
+        </div>
+        <div class="nav" id="mainNav">
+            <a {% if request.path=='/' %} class="active nav-link" {% else %} class="nav-link" {% endif %}
+                href="/">Home</a>
+            <!-- <a {% if request.path=='/about' %} class="active nav-link" {% else %} class="nav-link" {% endif %}
+                href="/about">About</a> -->
+            <a {% if request.path=='/calculator' %} class="active nav-link" {% else %} class="nav-link" {% endif %}
+                href="/calculator">Calculator</a>
+                <a {% if request.path=='/analysis' %} class="active nav-link" {% else %} class="nav-link" {% endif %}
+                    href="/analysis">Analysis</a>
+            <!-- <a href="javascript:void(0);" class="icon" onclick="openResponsive()">
+                <i class="fa fa-bars"></i>
+            </a> -->
+        </div>
+
+        <div id="template-body" style="clear: both; border-top: black solid 1px;">
+            <!-- &nbsp; -->
+            
+            {% block content%}{% endblock %}
+
+        </div>
+
+    </div>
+
+</body>
+
+<footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="{{ url_for('static',     filename='scripts/scripts.js') }}"></script>
+</footer>
+
+</html>

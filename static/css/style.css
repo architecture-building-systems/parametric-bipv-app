@@ -1,0 +1,309 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+
+#template-body {
+    /* height: 50%; */
+}
+
+.image {
+    width: 100%;
+    max-height: 50%;
+}
+
+.image-container {
+    /* background-color: #000; */
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow: none;
+}
+
+.image.contain {
+    object-fit: contain
+}
+
+.image.cover {
+    object-fit: cover
+}
+
+
+.header-logo {
+    width: 100%;
+    /* height: 2em; */
+    text-align:center;
+    /* background-color: #000; */
+    color: white;
+}
+
+#main-logo {
+    /* background-image: url("/static/warmingStripes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000% 100%; */
+    /* background-attachment:fixed;  */
+    background-color: #000;
+    margin:auto;
+    vertical-align:middle;
+}
+
+/* Add a black background color to the top navigation */
+.nav {
+    /* background-color: #333; */
+    /* width: 100%; */
+    overflow: hidden;
+    margin:auto;
+    text-align: center;
+}
+
+/* Style the links inside the navigation bar */
+.nav a {
+    width: calc(100% / 4);
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* Add an active class to highlight the current page */
+.nav-link {
+    /* background-color: grey; */
+}
+
+.active {
+    /* background-color: red; */
+
+}
+
+
+/* Hide the link that should open and close the nav on small screens */
+.nav .icon {
+    display: none;
+}
+
+/* Add a dark background on nav links and the dropdown button on hover */
+.nav a:hover {
+    background-color: #000;
+    color: white;
+}
+
+
+.content-container {
+    /* height: 100vh; */
+    width: 100%;
+    /* overflow: scroll; */
+    display: flex;
+}
+
+.thirds {
+    height: calc(100vh / 3);
+}
+/* .content-container div {
+    height: 100%;
+} */
+
+.content {
+    width: 50%;
+    height: 100%;
+    float: left;
+    /* flex: 1; */
+    margin: 0px auto;
+    padding: 1em;
+    overflow: scroll;
+}
+
+.content.left {
+    /* background-color: #3399FF; */
+    height: 100%;
+}
+
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(158, 158, 158, 0.7);
+    /* hide it at first */
+    display: none;
+  }
+  
+  .loader {
+    border: 16px solid #9ecae1;
+    /* Light grey */
+    border-top: 16px solid #cb181d;
+    /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    /* Add the following to center it */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -38px; /* half its width (border included) */
+    margin-top: -38px; /* half its height */
+  }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.content.right {
+    /* background-color: yellow; */
+    margin-right: -1px;
+    /* border-left: 1px solid black; */
+    /* margin: auto; */
+    /* display: flex; */
+}
+
+
+@media screen and (max-width: 600px) {
+    .content-container {
+        width: 100%;
+        height: auto;
+        display: inline;
+    }
+    .content {
+        width: 100%;
+        /* float: left; */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .left {
+        /* float: none; */
+        /* margin-right: 0; */
+        /* width: 100vw; */
+        border: 0;
+    }
+
+    .morph-output-body {
+        border-top: 2px solid #000;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        /* margin: 0; */
+        
+    }
+
+    .content-container {
+        width: 30px;
+    }
+}
+
+.morph-output {
+    width: 100%;
+    border-style: solid;
+    /* border-color: #000; */
+    /* background-color: brown; */
+    /* padding: 10px; */
+}
+
+.morph-body {
+    /* background-color: slategray; */
+}
+
+.nine {
+    height: 90%;
+}
+
+.one {
+    height: 10%;
+}
+
+#exec-get-results {
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    display: none;
+}
+
+.morph-output-body {
+    height: auto;
+}
+
+#configuration {
+    display: inline-block;
+    position: relative;
+    height: 50%;
+    width: 100%;
+}
+
+.bottom-half {
+    height: 50%;
+}
+
+.epwmap-container {
+    width: 100%;
+    height: 60%;
+}
+
+.morph-output-download {
+    text-align: center;
+    /* color: pink; */
+}
+
+
+/* 2 value range slider https://stackoverflow.com/questions/4753946/html-slider-with-two-inputs-possible  */
+section.two-val-range-slider {
+    position: relative;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+}
+
+section.two-val-range-slider input {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 15px;
+    width: 200px;
+    outline: none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+section.two-val-range-slider input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+}
+
+section.two-val-range-slider input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+}
+
+section.two-val-range-slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+}
+section.two-val-range-slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+}
+  section.two-val-range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
+}
