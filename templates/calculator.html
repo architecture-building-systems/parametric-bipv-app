@@ -3,133 +3,92 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Parametric Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parametric LCA</title>
+  <link rel="stylesheet" href="{{ url_for('static',     filename='css/app-style.css') }}">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 
 <body>
   {% extends "template.html" %}
   {% block content %}
+  <div id="app-container">
+    <div id="configuration-container" class="chart-container">
+      <div id="configuration-controls">
+        <div id="bipv-type-selection" class="configuration-primary-dropdown-container">
+          <label for="moduleType">Module Type:</label>
+          <select id="moduleType" name="moduleType">
+            <option value="monocrystalline">Monocrystalline</option>
+            <option value="organic">Organic PV</option>
+            <option value="perovskite">Perovskite Silicon</option>
+            <option value="polycrystalline">Polycrystalline</option>
+            <option value="cdte">CdTe</option>
+            <option value="cigs">CIGS</option>
+          </select>
 
-  <div class="content-container">
-    <div class="content">
-      <h2>Configuration</h2>
-      <form method="POST" class="pure-form" name='configuration' id="configuration" enctype="multipart/form-data"
-        action="{{ url_for('calculator') }}">
-        <!-- FRAME -->
-        <fieldset>
-          <label for="input_frame">None</label><br>
-          <input type="text" id="input_frame" name="input_frame"><br>
-        </fieldset>
-
-        <!-- FRONT FILM OUTER -->
-        <fieldset>
-          <label for="input_front_film">Anti-reflective</label><br>
-          <input type="text" id="input_front_film" name="inpinput_front_filmut_frame"><br>
-        </fieldset>
-
-        <!-- FRONT COVER -->
-        <fieldset>
-          <label for="input_front_cover">4mm Solar Glass</label><br>
-          <input type="text" id="input_front_cover" name="input_front_cover"><br>
-        
-        </fieldset>
-
-        <!-- FRONT FILM INNER -->
-        <fieldset>
-          <label for="input_front_inner_film">Red tint</label><br>
-          <input type="text" id="input_front_inner_film" name="input_front_inner_film"><br>
-        
-        </fieldset>
-
-        <!-- FRTON ENCAPSULANT -->
-        <fieldset>
-          <label for="input_front_encapsulant">Standard EVA</label><br>
-          <input type="text" id="input_front_encapsulant" name="input_front_encapsulant"><br>
-        
-        </fieldset>
-
-        <!-- CELL -->
-        <fieldset>
-          <label for="input_cell">CdTe</label><br>
-          <input type="text" id="input_cell" name="input_cell"><br>
-        
-        </fieldset>
-
-        <!-- REAR ENCAPSULANT -->
-        <fieldset>
-          <label for="input_rear_encapsulant">Standard EVA</label><br>
-          <input type="text" id="input_rear_encapsulant" name="input_rear_encapsulant"><br>
-        
-        </fieldset>
-
-        <!-- REAR INNER FILM -->
-        <fieldset>
-          <label for="input_rear_inner_film">None</label><br>
-          <input type="text" id="input_rear_inner_film" name="input_rear_inner_film"><br>
-        
-        </fieldset>
-
-        <!-- REAR COVER -->
-        <fieldset>
-          <label for="input_rear_cover">4mm Structural Glass</label><br>
-          <input type="text" id="input_rear_cover" name="input_rear_cover"><br>
-        
-        </fieldset>
-
-        <!-- REAR OUTER FILM -->
-        <fieldset>
-          <label for="input_rear_outer_film">None</label><br>
-          <input type="text" id="input_rear_outer_film" name="input_rear_outer_film"><br>
-        
-        </fieldset>
-
-        <!-- MOUNTING SYSTEM -->
-        <fieldset>
-          <label for="input_mounting">Aluminium</label><br>
-          <input type="text" id="input_mounting" name="input_mounting"><br>
-        
-        </fieldset>
-
-        <!-- JUNCTION BOX -->
-        <fieldset>
-          <label for="input_junction_box">Standard</label><br>
-          <input type="text" id="input_junction_box" name="input_junction_box"><br>
-        
-        </fieldset>
-
-        <!-- INVERTER -->
-        <fieldset>
-          <label for="input_inverter">Micro-inverter</label><br>
-          <input type="text" id="input_inverter" name="input_inverter"><br>
-        
-        </fieldset>
-        <button id="submit-form" type="button">Submit</button>
-        <input type="reset" id="reset-input" name="reset-input">
-        <div class="loader-container">
-          <div class="loader"></div>
         </div>
-      </form>
-
-
-      <p id="temp-output"></p>
-      <div class="morph-body one">
-        <a class="morph-output-download" id="exec-get-results" href="/download-morph-results" download
-          target="_blank">Download Results ></a>
+        <div id="bipv-layers-selection" class="configuration-secondary-dropdown-container">
+          <div id="layer-selects-container">
+            <!-- Dynamic <select> elements for each layer will be appended here by JavaScript -->
+          </div>
+        </div>
+      </div>
+      <div id="bipv-model-container">
+        <div id="solar-panel-model">
+        </div>
       </div>
     </div>
-  </div>
+    <div id="curve-container" class="chart-container">
+      <div class="curve-control-panel">
+        <label for="curve-slider">Self Consumption:</label>
+        <input type="range" id="curve-slider" name="curve-slider" min="0.05" max="0.95" step="0.05">
+        <output id="curve-slider-value">0.50</output>
+      </div>
+      <div class="curve-chart" id="pv-curve"></div>
+    </div>
+    <div id="pie-container" class="chart-container">
+      <div id="pie-chart-column">
+        <div class="pie-row">
+          <div class="pie-chart" id="chart1-1"></div>
+          <div class="pie-chart" id="chart1-2"></div>
+          <div class="pie-chart" id="chart1-3"></div>
+          <div class="pie-chart" id="chart1-4"></div>
+          <div class="pie-chart" id="chart1-5"></div>
+          <div class="pie-chart" id="chart1-6"></div>
+          <div class="pie-chart" id="chart1-7"></div>
+        </div>
+        <div class="pie-row">
+          <div class="pie-chart" id="chart2-1"></div>
+          <div class="pie-chart" id="chart2-2"></div>
+          <div class="pie-chart" id="chart2-3"></div>
+          <div class="pie-chart" id="chart2-4"></div>
+          <div class="pie-chart" id="chart2-5"></div>
+          <div class="pie-chart" id="chart2-6"></div>
+          <div class="pie-chart" id="chart2-7"></div>
+        </div>
+      </div>
+      <div id="pie-legend-column">
+        <div id="pie-loading" onclick="createPieCharts();createLineChart();">
+          <button id="load-pie-charts"> RELOAD </button>
 
-  </div>
-  </div>
+        </div>
+        <div id="pie-legends">
+        </div>
+      </div>
 
-
+    </div>
+  </div>
   {% endblock %}
 </body>
 
 <footer>
+  
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script type="text/javascript" src="../jszip.js"></script>
-  <script src="{{ url_for('static',     filename='scripts/scripts.js') }}"></script>
+  <!-- <script type="text/javascript" src="../jszip.js"></script>
+  <script src="{{ url_for('static',     filename='scripts/scripts.js') }}"></script> -->
 </footer>
 
 </html>

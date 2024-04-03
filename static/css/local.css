@@ -1,0 +1,44 @@
+#calculator-container {
+    background-color: blue;
+    width: 100%;
+    height: 80vh;
+}
+
+.app-container {
+    display: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.app-card {
+    background: tomato;
+    /* padding: 5px; */
+    width: 100%;
+}
+
+.panel-column-half {
+    width: 50%;
+    background-color: cyan;
+    float: left;
+}
+
+.configuration-form {
+    width: 100%;
+}
+
+.panel-body {
+    width: 100%;
+    height: 100%
+}
+
+.form-selector-container {
+    width: 100%;
+    height: 100%;
+    /* float: left; */
+}
+
+.form-selector {
+    width: 50%;
+    background-color: yellow;
+    float: left;
+}

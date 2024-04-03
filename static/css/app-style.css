@@ -1,0 +1,162 @@
+#app-container {
+    position: relative;
+    width: 100%;
+    /* Set the width according to your requirements */
+    height: 90vh;
+    /* Set the height according to your requirements */
+    border: 1px solid #ccc;
+}
+
+#configuration-container,
+#curve-container {
+    width: 50%;
+    height: 66.66%;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+#pie-container {
+    width: 100%;
+    height: 33.33%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    clear: both;
+    /* Clear the float from previous children */
+}
+
+#pie-loading {
+    height: 15%;
+    width: 100%;
+}
+
+#pie-legends {
+    /* height: 90%; */
+    width: 100%;
+}
+
+#bipv-model-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: #E6AB1F;
+}
+
+#solar-panel-model {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: #E6AB1F;
+}
+
+
+.configuration-primary-dropdown-container {
+    position: relative;
+    z-index: 10;
+    margin: 10px;
+    background-color: rgba(102, 102, 102, 0.05);
+}
+
+.configuration-secondary-dropdown-container {
+    position: relative;
+    z-index: 10;
+    margin: 10px;
+    background-color: rgba(102, 102, 102, 0.05);
+}
+
+/* #bipv-type-selection {
+    float: left;
+    height: 100px;
+} */
+
+
+#bipv-layers-selection {
+    overflow: auto;
+    /* overflow-y: scroll; */
+}
+
+#configuration-controls {
+    float: left;
+    width: 30%;
+    height: 90%;
+    z-index: 10;
+    overflow: scroll;
+}
+
+.layer-container {
+    margin-bottom: 5px;
+}
+
+/* .select-container {
+    display: flex;
+} */
+
+.select-container select {
+    margin-right: 1px;
+}
+
+.curve-chart {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+#pie-chart-column {
+    float: left;
+    width: 90%;
+    height: 100%;
+}
+
+.pie-row {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.pie-chart {
+    float: left;
+    width: calc(100%/7);
+    height: 100%;
+    /* background-color: #D95F0D; */
+}
+
+#pie-legend-column {
+    float: left;
+    width: 10%;
+    height: 100%;
+}
+
+.curve-control-panel {
+    padding: 5px;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
+    background-color: #f9f9f9;
+    width: 100px;
+    z-index: 100;
+    position: absolute;
+    right: 0;
+  }
+  
+  .curve-control-panel label {
+    display: block;
+    /* margin-bottom: 10px; */
+  }
+  
+  .curve-control-panel input[type="range"] {
+    width: 100%;
+  }
+  
+  .curve-control-panel output {
+    display: block;
+    /* margin-top: 10px; */
+    font-weight: bold;
+  }
+  

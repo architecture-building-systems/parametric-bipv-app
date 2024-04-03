@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Parametric LCIA BIPV</title>
+</head>
+
+<body>
+  {% extends "template.html" %}
+  {% block content %}
+
+  <div class="content-container">
+    <div class="container app-container">
+      <!-- Panel 1 is the configuration panel with a form to select the layers in the device -->
+      <div class="app-card">
+        <div class="panel-body">
+          <div id="panel-one-form-container" class="panel-column-half">
+            <div class="configuration-form">
+              <h1>Solar Panel Calculator</h1>
+
+              <form id="initialForm">
+                <!-- Initial choice of PV technology -->
+                <label for="pvTechnology" onchange="loadAdditionalForm()">Choose PV Technology:</label>
+                <select id="pvTechnology" onchange="loadAdditionalForm()">
+                  <option value="Monocrystalline">Monocrystalline</option>
+                  <option value="Polycrystalline">Polycrystalline</option>
+                  <option value="Silicon tandem">Silicon tandem</option>
+                  <option value="CIGS">CIGS</option>
+                  <option value="CdTe">CdTe</option>
+                  <option value="Organic PV">Organic PV</option>
+
+                  <!-- Add other technology options -->
+                </select>
+              </form>
+              <div class="form-selector-container">
+                <div class="form-selector" id="additionalFormContainerOptions">
+                  <!-- Additional form elements will be dynamically inserted here -->
+                </div>
+                <div class="form-selector" id="additionalFormContainerLocations">
+                  <!-- Additional form elements will be dynamically inserted here -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="panel-column-half">
+            <div id="technologyDetails">
+              <!-- Technology details will be dynamically inserted here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app-card">2</div>
+    <div class="app-card">3</div>
+    <div class="app-card">4</div>
+
+
+
+  </div>
+  </div>
+
+
+
+  {% endblock %}
+</body>
+
+<footer>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script type="text/javascript" src="../jszip.js"></script>
+  <script src="{{ url_for('static',     filename='scripts/scripts.js') }}"></script>
+</footer>
+
+</html>

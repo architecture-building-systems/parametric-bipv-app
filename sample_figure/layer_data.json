@@ -1,0 +1,828 @@
+{
+    "organicPV": [
+        {
+            "title": "Back electrode",
+            "options": {
+                "Aluminum production": [
+                    "CA-QC",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Electron transport layer",
+            "options": {
+                "Lithium fluoride": [
+                    "RoW",
+                    "CN",
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Substrate",
+            "options": {
+                "PET": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ]
+            }
+        },
+        {
+            "title": "Encapsulant",
+            "options": {
+                "PET": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ]
+            }
+        },
+        {
+            "title": "FTO",
+            "options": {
+                "Indium tin oxide": [
+                    "RoW",
+                    "RER"
+                ],
+                "Tin dioxide": [
+                    "GLO"
+                ],
+                "Fluorine production": [
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Hole transport layer",
+            "options": {
+                "Polystyrene": [
+                    "RER",
+                    "RoW"
+                ],
+                "Polyvinylfluoride production": [
+                    "US",
+                    "RoW"
+                ],
+                "Molybdenum trioxide production": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "P3HT",
+            "options": {
+                "Bromine": [
+                    "RoW",
+                    "RER",
+                    "GLO"
+                ],
+                "Electricity medium voltage": [
+                    "CN",
+                    "RER",
+                    "WECC-US",
+                    "Asia without China"
+                ],
+                "Hexane production": [
+                    "GLO"
+                ],
+                "Thiophene - Butanes production": [
+                    "RoW"
+                ],
+                "Thiophene - Sulphur": [
+                    "RoW",
+                    "Europe without Switzerland",
+                    "PE",
+                    "BR",
+                    "IN",
+                    "ZA",
+                    "CO"
+                ],
+                "Heat, heavy fuel oil": [
+                    "Europe without Switzerland",
+                    "CA-QC",
+                    "CH",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "PCBM",
+            "options": {
+                "Methanol": [
+                    "GLO"
+                ],
+                "Solvent organic": [
+                    "GLO"
+                ],
+                "Electricity medium voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "Asia without China and GCC"
+                ],
+                "Monochlorobenzene": [
+                    "RoW",
+                    "ROW"
+                ],
+                "Nitrogen": [
+                    "RER",
+                    "RoW"
+                ],
+                "o-Dichlorobenzene": [
+                    "RoW",
+                    "RER"
+                ],
+                "Pyridine-compounds": [
+                    "GLO"
+                ],
+                "Toluene": [
+                    "RoW"
+                ],
+                "Xylene": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "Front cover",
+            "options": {
+                "Glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "Tempering": [
+                    "RoW",
+                    "RER"
+                ],
+                "Polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "Rear cover",
+            "options": {
+                "Polyvinylfluoride film": [
+                    "RoW",
+                    "US"
+                ],
+                "Polyethylene terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ],
+                "Flat glass, uncoated": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Junction box",
+            "options": {
+                "Glass fibre reinforced plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Wires",
+            "options": {
+                "Copper": [
+                    "RER",
+                    "ROW"
+                ]
+            }
+        },
+        {
+            "title": "Electricity for assembly",
+            "options": {
+                "Electricity medium voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS",
+                    "Asia without China"
+                ]
+            }
+        },
+        {
+            "title": "Mounting system",
+            "options": {
+                "Aluminium wrought alloy": [
+                    "GLO"
+                ],
+                "Aluminium processing": [
+                    "GLO",
+                    "RER"
+                ]
+            }
+        }
+    ],
+    "siliconTandem": [
+        {
+            "title": "Frame",
+            "options": {
+                "Aluminium profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Front cover",
+            "options": {
+                "Glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "Tempering": [
+                    "RoW",
+                    "RER"
+                ],
+                "Polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "TCO",
+            "options": {
+                "Indium tin oxide": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "Encapsulant",
+            "options": {
+                "EVA": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "Epoxy resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "Polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Silicon cell",
+            "options": {
+                "cell": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Perovskite cell",
+            "options": {
+                "Lead iodide": [
+                    "GLO"
+                ],
+                "Methyl iodide": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "Ethylene bromide": [
+                    "RER",
+                    "RoW"
+                ],
+                "Chemicals organic": [
+                    "GLO"
+                ],
+                "Solvents, organic": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Conductive adhesive",
+            "options": {
+                "Silver": [
+                    "GLO"
+                ],
+                "Phenolic resin": [
+                    "RoW",
+                    "RER"
+                ],
+                "Epoxy resin": [
+                    "RoW",
+                    "RER"
+                ],
+                "diphenylether-compounds": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Rear cover",
+            "options": {
+                "Polyvinylfluoride film": [
+                    "RoW",
+                    "US"
+                ],
+                "Polyethylene terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ],
+                "Flat glass, uncoated": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Junction box",
+            "options": {
+                "Glass fibre reinforced plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Electricity for assembly",
+            "options": {
+                "Electricity medium voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS",
+                    "Asia without China and GCC"
+                ]
+            }
+        },
+        {
+            "title": "bypass diode",
+            "options": {
+                "light emitting diode production": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Mounting system",
+            "options": {
+                "Aluminium wrought alloy": [
+                    "GLO"
+                ],
+                "Aluminium processing": [
+                    "GLO",
+                    "RER"
+                ]
+            }
+        }
+    ],
+    "monocrystalline": [
+        {
+            "title": "Frame",
+            "options": {
+                "Aluminium profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Electricity for assembly",
+            "options": {
+                "Electricity medium voltage": [
+                    "CN",
+                    "RER",
+                    "US-WECC",
+                    "RAS",
+                    "Asia without China and GCC"
+                ]
+            }
+        },
+        {
+            "title": "Front cover",
+            "options": {
+                "Glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "Tempering": [
+                    "RoW",
+                    "RER"
+                ],
+                "Polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "Encapsulant",
+            "options": {
+                "EVA": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "Epoxy resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "Polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Rear cover",
+            "options": {
+                "Polyvinylfluoride film": [
+                    "RoW",
+                    "US"
+                ],
+                "Polyethylene terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ]
+            }
+        },
+        {
+            "title": "Cell",
+            "options": {
+                "cell": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Mounting system",
+            "options": {
+                "Aluminium wrought alloy": [
+                    "GLO"
+                ],
+                "Aluminium processing": [
+                    "GLO",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "Wires",
+            "options": {
+                "Copper": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Junction box",
+            "options": {
+                "Glass fibre reinforced plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        }
+    ],
+    "polycrystalline": [
+        {
+            "title": "Frame",
+            "options": {
+                "Aluminium profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Front cover",
+            "options": {
+                "Glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "Tempering": [
+                    "RoW",
+                    "RER"
+                ],
+                "Polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "Encapsulant",
+            "options": {
+                "EVA": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "Epoxy resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "Polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Rear cover",
+            "options": {
+                "Polyvinylfluoride film": [
+                    "RoW",
+                    "US"
+                ],
+                "Polyethylene terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ]
+            }
+        },
+        {
+            "title": "Cell",
+            "options": {
+                "cell": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Junction box",
+            "options": {
+                "Glass fibre reinforced plastic": [
+                    "GLO",
+                    "RER",
+                    "ROW"
+                ]
+            }
+        },
+        {
+            "title": "Electricity for assembly",
+            "options": {
+                "Electricity medium voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS",
+                    "Asia without China and GCC"
+                ]
+            }
+        }
+    ],
+    "cdte": [
+        {
+            "title": "Frame",
+            "options": {
+                "Aluminium profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Front cover",
+            "options": {
+                "Glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "Tempering": [
+                    "RoW",
+                    "RER"
+                ],
+                "Polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "TCO",
+            "options": {
+                "Indium tin oxide": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "Cell",
+            "options": {
+                "Cadmium telluride": [
+                    "RoW",
+                    "US"
+                ],
+                "Cadmium sulfide": [
+                    "RoW",
+                    "US"
+                ]
+            }
+        },
+        {
+            "title": "Encapsulant",
+            "options": {
+                "EVA": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "Epoxy resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "Polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Rear cover",
+            "options": {
+                "Polyvinylfluoride film": [
+                    "RoW",
+                    "US"
+                ],
+                "Polyethylene terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ]
+            }
+        },
+        {
+            "title": "Junction box",
+            "options": {
+                "Glass fibre reinforced plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Electricity for assembly",
+            "options": {
+                "Electricity medium voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "Asia without China and GCC",
+                    "RAS"
+                ]
+            }
+        }
+    ],
+    "cigs": [
+        {
+            "title": "Frame",
+            "options": {
+                "Aluminium profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Front cover",
+            "options": {
+                "Glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "Tempering": [
+                    "RoW",
+                    "RER"
+                ],
+                "Polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "TCO",
+            "options": {
+                "Indium tin oxide": [
+                    "RoW",
+                    "RER"
+                ],
+                "Zinc oxide": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "Encapsulant",
+            "options": {
+                "EVA": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "Epoxy resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "Polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Cell",
+            "options": {
+                "Cadmium sulfide": [
+                    "RoW",
+                    "US"
+                ],
+                "Selenium": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "Indium": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "Gallium": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "Rear cover",
+            "options": {
+                "Polyvinylfluoride film": [
+                    "RoW",
+                    "US"
+                ],
+                "Polyethylene terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ]
+            }
+        },
+        {
+            "title": "Junction box",
+            "options": {
+                "Glass fibre reinforced plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Wires",
+            "options": {
+                "Copper": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "Electricity for assembly",
+            "options": {
+                "Electricity medium voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS",
+                    "Asia without China and GCC"
+                ]
+            }
+        }
+    ]
+}
