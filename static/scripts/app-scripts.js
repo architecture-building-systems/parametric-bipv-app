@@ -406,7 +406,7 @@ function createLineChart(containerId, inputData) {
         .range([marginLeft, width - marginRight]);
 
     const y = d3.scaleLinear()
-        .domain([0, 2]).nice()
+        .domain([0, 4]).nice()
         .range([height - marginBottom, marginTop]);
 
     const curveType = d3.curveCardinal
