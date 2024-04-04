@@ -198,7 +198,6 @@ function capitalizeFirstLetter(string) {
 function createPieChart(containerId, data, category) {
     var container = document.getElementById(containerId);
     var width = container.offsetWidth;
-
     var height = container.offsetHeight;
 
     // const color = d3.scaleOrdinal()
@@ -262,9 +261,10 @@ function createPieChart(containerId, data, category) {
         .data(arcs)
         .join("text")
         .call(text => text.append("tspan")
-            .attr("y", "-50%")
-            .attr("x", "-4em")
-            .attr("font-weight", "bold")
+            .attr("y", "-45%")
+            .attr("x", "-1em")
+            .attr("font-size", "8px")
+            // .attr("font-weight", "regular")
             .text(category))
         .attr("transform", "rotate(-90)") // Rotates the title by -45 degrees;
 };
@@ -435,7 +435,7 @@ function createLineChart(containerId, inputData) {
             .attr("fill", "currentColor")
             .attr("text-anchor", "end")
             .attr("font-weight", "bold")
-            .text("kWh/sqm/a →"));
+            .text("Annual irradiance (kWh/sqm/a) →"));
 
     svg.append("g")
         .attr("transform", `translate(${marginLeft},0)`)
@@ -447,7 +447,7 @@ function createLineChart(containerId, inputData) {
             .attr("fill", "currentColor")
             .attr("text-anchor", "start")
             .attr("font-weight", "bold")
-            .text("↑ kgCO2e/kWh"));
+            .text("↑ Device intensity (kgCO2e/kWh)"));
 
     // Add grid
     svg.append("g")
