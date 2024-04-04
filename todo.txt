@@ -1,0 +1,16 @@
+04.04.2024
+- General
+    - Add some way of seeing the absolute valeus for configured device
+    - add a download function to get the configured device and chart data
+    - add system size
+    - add inverter choice
+    - add bypass diodes
+- Carbon curve  
+    - Update to be sensitive to the changes made in the layers
+    - Add performance ratio as a control 
+    - show regional grid mixes and their alinging x valeus
+    - Adapt to be the other impacts
+    - add explainer about the threshhold value
+- Pie charts
+    - change these to stacked bars?
+- 

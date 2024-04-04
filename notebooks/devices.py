@@ -91,7 +91,7 @@ class PolyDevice(object):
         self.NOCT = 45.2
         self.efficiency = 17.5 # expected conversion efficiency in %
         self.lifetime = 25 # expected lifetime of system
-        self.default_impact = 264
+        self.default_impact = 264 #kgCO2e/m2
     
     def module_output(self, G_eff, T_amb):
         """
