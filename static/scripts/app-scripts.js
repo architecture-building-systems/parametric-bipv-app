@@ -319,9 +319,18 @@ function drawStackedBarChart(data, containerId) {
 
     var xText = d3.select("#stacked-x-axis").selectAll('text')._groups[0]
     for (const [key, value] of Object.entries(xText)) {
-        // console.log(key)
-        value.style.fontWeight = 800
-        value.style.transform = 'rotate(-90deg) translate(55%, -175%)';
+        // value.style.fontWeight = 800
+        // value.style.transform = 'rotate(-90deg) translate(55%, -175%)';
+        value.setAttribute("id", "text-label-stack-x")
+    }
+
+    var adjustX = 0;
+    var adjustY = 0;
+
+    var isSafari = window.safari !== undefined;
+    if (isSafari) {
+        var adjustX = (-height / 2) * 1.15;
+        var adjustY = -25;
     }
 
     // Append the vertical axis.
@@ -332,16 +341,16 @@ function drawStackedBarChart(data, containerId) {
         // .call(g => g.selectAll(".domain").remove())
         .call(g => g.append("text")
             .attr("id", "yAxisLabel")
-            // .attr("x", -marginLeft)
-            // .attr("y", height / 2)
+            .attr("x", adjustX)
+            .attr("y", adjustY)
             .attr("fill", "currentColor")
             .attr("text-anchor", "start")
             .attr("font-weight", "bold")
             .text("Percent Contribution"));
 
-    var yLabel = d3.select("#yAxisLabel")._groups[0][0]
-    console.log(yLabel)
-    yLabel.style.transform = 'rotate(-90deg) translate(-200%, -225%)';
+    // var yLabel = d3.select("#yAxisLabel")._groups[0][0]
+    // yLabel.style.transform = 'rotate(-90deg) translate(-200%, -225%)';
+    // yLabel.style.transform = 'rotate(-90deg)';
 
     d3.selectAll("g.yAxisStack g.tick")
         .append("line")
@@ -357,6 +366,7 @@ function drawStackedBarChart(data, containerId) {
     //     .
 
 }
+
 
 function createStackedBarChart() {
     var activeSelectValues = getActiveSelectValues();
@@ -544,9 +554,9 @@ function createLineChart(containerId, rawData, lossFactor) {
         // .attr('class', 'area')
         .attr('fill', '#E6AB1F')
         .attr('d', area)
-        .transition()
-        .duration(3500)
-        .ease(d3.easePoly)
+        // .transition()
+        // .duration(3500)
+        // .ease(d3.easePoly)
         .attr("fill-opacity", 0.5)
         .attr("stroke-width", 2.5)
         .attr("stroke", "#E6AB1F")
@@ -568,13 +578,15 @@ function createLineChart(containerId, rawData, lossFactor) {
         .attr("stroke-width", 2.5)
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round")
-        .attr("stroke-dasharray", `0,${l}`)
+        .attr("opacity", 1)
+        // .attr("-webkit-opacity", 0)
         .attr("d", line)
-        .attr('class', 'setCurve')  // Assigning a class for easy selection
-        .transition()
-        .duration(5000)
-        .ease(d3.easePoly)
-        .attr("stroke-dasharray", `${l},${l}`);
+        .attr('class', 'setCurve');  // Assigning a class for easy selection
+        // .transition()
+        // .duration(5000)
+        // .ease(d3.easePoly)
+        // .attr("opacity", 1);
+        // .attr("-webkit-opacity", 1)
 
 
     var range = (start, stop, step = 1) => {
@@ -593,7 +605,12 @@ function createLineChart(containerId, rawData, lossFactor) {
         .style("stroke", "black")
         .style("stroke-width", 2)
         .attr("d", line)
-        .attr("class", "gridMixLine");
+        .attr("class", "gridMixLine")
+        .attr("opacity", 1);
+        // .transition()
+        // .duration(5000)
+        // .ease(d3.easePoly)
+        // .attr("opacity", 1);
 
 }
 
@@ -668,8 +685,8 @@ document.getElementById('curve-slider-self-consumption').addEventListener('chang
             .transition()
             .duration(250)
             .ease(d3.easePoly)
-            .attr('d', line)
-            .attr("stroke-dasharray", `${l},${l}`);
+            .attr('d', line);
+            // .attr("stroke-dasharray", `${l},${l}`);
     });
 });
 
@@ -721,8 +738,8 @@ document.getElementById('curve-slider-performance-ratio').addEventListener('chan
             .transition()
             .duration(250)
             .ease(d3.easePoly)
-            .attr('d', line)
-            .attr("stroke-dasharray", `${l},${l}`);
+            .attr('d', line);
+            // .attr("stroke-dasharray", `${l},${l}`);
 
         var arrayKeys = Object.keys(inputData)
         var firstKey = arrayKeys[0]
@@ -750,6 +767,7 @@ document.getElementById('curve-slider-performance-ratio').addEventListener('chan
             .attr('d', area)
             .attr('fill', '#E6AB1F')
             .attr("fill-opacity", 0.5);
+            
 
     });
 });

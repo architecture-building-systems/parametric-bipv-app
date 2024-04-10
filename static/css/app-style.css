@@ -166,6 +166,9 @@
     /* border: 1px solid #ddd; */
     clear: both;
     /* Clear the float from previous children */
+    position: relative;
+    top: 2%;
+
 }
 
 #impact-loading {
@@ -200,7 +203,6 @@
 .moduleTypeSelect {
     font-size: 12px;
     font-weight: 800;
-
 }
 
 .select-container {
@@ -210,8 +212,6 @@
 .layer-option-select {
     font-size: 9px;
 }
-
-
 
 .layer-title {
     font-size: 10px;
@@ -238,6 +238,32 @@
     width: 90%;
     height: 100%;
 }
+
+#yAxisLabel {
+    -webkit-transform-origin:right, top;
+    transform-origin: right, top;
+    -moz-transform-origin: right, top;
+    -ms-transform-origin:right, top;
+    -webkit-transform: rotate(-90deg) translate(-15%, -10%);
+    transform: rotate(-90deg) translate(-15%, -10%);
+    -moz-transform: rotate(-90deg) translate(-15%, -10%);
+    -ms-transform: rotate(-90deg) translate(-15%, -10%);
+}
+
+#text-label-stack-x {
+    -webkit-transform-origin:0% 0%;
+    transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin:0% 0%;
+
+    -webkit-transform: rotate(-90deg) translate(55%, -175%);
+    transform: rotate(-90deg) translate(12rem, -2em);
+    -moz-transform: rotate(-90deg) translate(12rem, -2em);
+    -ms-transform: rotate(-90deg) translate(12rem, -2em);
+
+    font-weight: 800;
+} 
+
 
 
 #impact-chart-column {
