@@ -1,0 +1,733 @@
+{
+    "organic": [
+        {
+            "title": "frame",
+            "options": {
+                "aluminium_profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "no_frame": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "front_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "cell",
+            "options": {
+                "cell": [
+                    "generic"
+                ]
+            }
+        },
+        {
+            "title": "encapsulant",
+            "options": {
+                "pet": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ]
+            }
+        },
+        {
+            "title": "rear_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "polyvinylfluoride_film": [
+                    "RoW",
+                    "US"
+                ],
+                "polyethylene_terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ],
+                "flat_glass,_uncoated": [
+                    "RER",
+                    "RoW"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "wires",
+            "options": {
+                "copper": [
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "junction_box",
+            "options": {
+                "glass_fibre_reinforced_plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "mounting_system",
+            "options": {
+                "aluminium_mounting": [
+                    "GLO",
+                    "RER"
+                ],
+                "no_mounting": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "electricity_for_assembly",
+            "options": {
+                "electricity_medium_voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS"
+                ]
+            }
+        }
+    ],
+    "perovskite": [
+        {
+            "title": "frame",
+            "options": {
+                "aluminium_profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "no_frame": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "front_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "cell",
+            "options": {
+                "cell": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "encapsulant",
+            "options": {
+                "eva": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "epoxy_resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "rear_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "polyvinylfluoride_film": [
+                    "RoW",
+                    "US"
+                ],
+                "polyethylene_terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ],
+                "flat_glass,_uncoated": [
+                    "RER",
+                    "RoW"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "wires",
+            "options": {
+                "copper": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "junction_box",
+            "options": {
+                "glass_fibre_reinforced_plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "mounting_system",
+            "options": {
+                "aluminium_mounting": [
+                    "GLO",
+                    "RER"
+                ],
+                "no_mounting": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "electricity_for_assembly",
+            "options": {
+                "electricity_medium_voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS"
+                ]
+            }
+        }
+    ],
+    "monocrystalline": [
+        {
+            "title": "frame",
+            "options": {
+                "aluminium_profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "no_frame": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "front_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "cell",
+            "options": {
+                "cell": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "encapsulant",
+            "options": {
+                "eva": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "epoxy_resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "rear_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "polyvinylfluoride_film": [
+                    "RoW",
+                    "US"
+                ],
+                "polyethylene_terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "wires",
+            "options": {
+                "copper": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "junction_box",
+            "options": {
+                "glass_fibre_reinforced_plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "mounting_system",
+            "options": {
+                "aluminium_mounting": [
+                    "GLO",
+                    "RER"
+                ],
+                "no_mounting": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "electricity_for_assembly",
+            "options": {
+                "electricity_medium_voltage": [
+                    "CN",
+                    "RER",
+                    "US-WECC",
+                    "RAS"
+                ]
+            }
+        }
+    ],
+    "polycrystalline": [
+        {
+            "title": "frame",
+            "options": {
+                "aluminium_profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "no_frame": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "front_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "cell",
+            "options": {
+                "cell": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "encapsulant",
+            "options": {
+                "eva": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "epoxy_resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "rear_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "polyvinylfluoride_film": [
+                    "RoW",
+                    "US"
+                ],
+                "polyethylene_terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "wires",
+            "options": {
+                "copper": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "junction_box",
+            "options": {
+                "glass_fibre_reinforced_plastic": [
+                    "GLO",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "mounting_system",
+            "options": {
+                "aluminium_mounting": [
+                    "GLO",
+                    "RER"
+                ],
+                "no_mounting": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "electricity_for_assembly",
+            "options": {
+                "electricity_medium_voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS"
+                ]
+            }
+        }
+    ],
+    "cdte": [
+        {
+            "title": "frame",
+            "options": {
+                "aluminium_profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "no_frame": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "front_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "cell",
+            "options": {
+                "cell": [
+                    "US",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "encapsulant",
+            "options": {
+                "eva": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "epoxy_resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "rear_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "polyvinylfluoride_film": [
+                    "RoW",
+                    "US"
+                ],
+                "polyethylene_terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "wires",
+            "options": {
+                "copper": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "junction_box",
+            "options": {
+                "glass_fibre_reinforced_plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "mounting_system",
+            "options": {
+                "aluminium_mounting": [
+                    "GLO",
+                    "RER"
+                ],
+                "no_mounting": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "electricity_for_assembly",
+            "options": {
+                "electricity_medium_voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS"
+                ]
+            }
+        }
+    ],
+    "cigs": [
+        {
+            "title": "frame",
+            "options": {
+                "aluminium_profile": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ],
+                "no_frame": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "front_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ],
+                "polycarbonate": [
+                    "RoW",
+                    "RER"
+                ]
+            }
+        },
+        {
+            "title": "cell",
+            "options": {
+                "cell": [
+                    "RER",
+                    "RoW",
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "encapsulant",
+            "options": {
+                "eva": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ],
+                "epoxy_resin": [
+                    "RER",
+                    "RoW"
+                ],
+                "polyurethane": [
+                    "GLO"
+                ]
+            }
+        },
+        {
+            "title": "rear_cover",
+            "options": {
+                "tempered_glass": [
+                    "RoW",
+                    "RER"
+                ],
+                "polyvinylfluoride_film": [
+                    "RoW",
+                    "US"
+                ],
+                "polyethylene_terephthalate": [
+                    "RER",
+                    "RoW",
+                    "CA-QC"
+                ],
+                "glass": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "wires",
+            "options": {
+                "copper": [
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "junction_box",
+            "options": {
+                "glass_fibre_reinforced_plastic": [
+                    "GLO",
+                    "RER",
+                    "RoW"
+                ]
+            }
+        },
+        {
+            "title": "mounting_system",
+            "options": {
+                "aluminium_mounting": [
+                    "GLO",
+                    "RER"
+                ],
+                "no_mounting": [
+                    "none"
+                ]
+            }
+        },
+        {
+            "title": "electricity_for_assembly",
+            "options": {
+                "electricity_medium_voltage": [
+                    "CN",
+                    "RER",
+                    "US",
+                    "RAS"
+                ]
+            }
+        }
+    ]
+}

@@ -2,7 +2,7 @@ import math
 import numpy as np
 
 class System:
-    def __init__(self, device_type):
+    def __init__(self, device_type, loss_factor = 0.1):
         if device_type=='monocrystalline':
             self.device = MonoDevice()
         elif device_type=='polycrystalline':
@@ -18,7 +18,7 @@ class System:
         
         self.coverage = 10
         self.n_devices = math.ceil(self.coverage / self.device.module_area)
-        self.system_loss_factor = 0.1
+        self.system_loss_factor = loss_factor
         
     def system_output(self, G_eff, T_amb):
         """
@@ -35,18 +35,21 @@ class System:
         self.system_lifetime_output_kwh = np.sum(projected_lifetime_output(self.system_output_kwh, self.device.lifetime))
         return self.system_output_kwh
     
-    def system_mitigated_kwh(self, self_sufficiency):
-        self.system_mitigated_lifetime_kwh = self.system_lifetime_output_kwh * self_sufficiency
+    def system_mitigated_kwh(self, self_consumption):
+        self.system_mitigated_lifetime_kwh = self.system_lifetime_output_kwh * self_consumption
         
     
-    def system_cumulative_impact(self, impact_value, self_sufficiency):
+    def system_cumulative_impact(self, impact_value, self_consumption):
         # calcualte the impact associated with the cosntructed system
         self.system_impact = impact_value * (self.n_devices * self.device.module_area)
         # using a self sufficiency ratio calculate how much of the lifetime output can be counted towards avoided electrcitiy consumption
-        self.system_mitigated_kwh(self_sufficiency)
+        self.system_mitigated_kwh(self_consumption)
         # the avoided electricity consumption (mitigated lifetime kwh) is then used to cacluatle the impact per kWh (often kgCO2e / kWh)
         # this number can be more easily compared to grid factors
-        self.system_impact_generation = self.system_impact / self.system_mitigated_lifetime_kwh
+        if self.system_mitigated_lifetime_kwh==0:
+            self.system_impact_generation = 0
+        else:
+            self.system_impact_generation = self.system_impact / self.system_mitigated_lifetime_kwh
         return self.system_impact_generation
     
     # def system_impact_curve()
@@ -229,10 +232,10 @@ def pv_watts_method(G_eff, T_cell, P_ref, gamma, T_ref=25, G_ref=1000):
     if gamma < -0.02:
         gamma = gamma / 100
 
-    if G_eff > 125:
-        P_mp = (G_eff / G_ref) * P_ref * (1 + gamma * (T_cell - T_ref))
-    else:
-        P_mp = ((0.008 * G_eff**2) / G_ref) * P_ref * (1 + gamma * (T_cell - T_ref))
+    # if G_eff > 125:
+    #     P_mp = (G_eff / G_ref) * P_ref * (1 + gamma * (T_cell - T_ref))
+    # else:
+    P_mp = ((0.008 * G_eff**2) / G_ref) * P_ref * (1 + gamma * (T_cell - T_ref))
     return P_mp
 
 

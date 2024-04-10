@@ -4,131 +4,262 @@
     /* Set the width according to your requirements */
     height: 90vh;
     /* Set the height according to your requirements */
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
 }
 
-#configuration-container,
-#curve-container {
-    width: 50%;
+#configuration-container {
+    width: 45%;
     height: 60%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     position: relative;
 }
 
-#pie-container {
+#configuration-controls {
+    float: left;
+    width:48%;
+    height: 95%;
+    margin-top: 2.5%;
+    z-index: 10;
+    overflow: scroll;
+    /* border: 0.5px solid black; */
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0.5rem 0.5rem black;
+}
+
+/* #configuration-title {
+    height: 5%;
+} */
+
+#configured-output-container {
+    /* left: 10px; */
+    margin-top: 2.5%;
+    margin-left: 1%;
+    float: left;
+    width: 48%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+#configured-device-results {
+    height: 84%;
+    margin-left: 5%;
+    display: block;
+    margin-bottom: 3%;
+    width: 89%;
+    font-size: 12px;
+    line-height: 15px;
+    overflow: scroll;
+    border: 1px solid #000000;
+    /* border-radius: 10px; */
+    box-sizing: border-box;
+    box-shadow: 0.5rem 0.5rem black;
+    /* text-align: justify; */
+    /* text-justify: inter-word;
+    justify-content: left; */
+}
+
+#configured-device-results-inner {
+    margin: 3px;
+}
+
+#button-container {
+    width: 95%;
+    /* height: 20%; */
+    margin-bottom: 0px;
+}
+
+.app-button {
+    width: 45%;
+    cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0.5rem 0.5rem black;
+}
+
+.app-button:hover{
+    border: 1px solid #888;
+    background-color: #ddd;
+  }
+
+#download-data {
+    margin-left: 5%;
+    /* background-color: rebeccapurple; */
+}
+
+#load-impact-charts {
+    margin-left: 2%;
+    margin-right: 1%;
+    /* background-color: rebeccapurple; */
+}
+
+
+#curve-container {
+    width: 55%;
+    height: 60%;
+    float: left;
+    box-sizing: border-box;
+    /* border: 1px solid #ddd; */
+    position: relative;
+}
+
+.curve-chart {
+    width: 100%;
+    height: 90%;
+}
+
+.curve-control-panel {
+    padding: 5px;
+    height: 10%;
+    width: 100%;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
+    /* background-color: #f9f9f9; */
+    /* z-index: 100; */
+    /* position: absolute; */
+    left: 0;
+}
+
+.curve-control-panel label {
+    display: block;
+    /* margin-bottom: 10px; */
+}
+
+.label-output-container {
+    display: flex;
+    /* Use flexbox to align items */
+    align-items: center;
+    /* Align items vertically */
+}
+
+.label-output-container output {
+    margin-left: 10px;
+    /* Add some space between the label and output */
+    font-weight: bold;
+    /* Optional: make the output value stand out */
+}
+
+.curve-control-panel input[type="range"] {
+    width: 100%;
+}
+
+.curve-control-panel output {
+    display: block;
+    /* margin-top: 10px; */
+    font-weight: bold;
+}
+
+.curve-control-panel-element {
+    width: calc(100% / 3.1);
+    margin-left: 5px;
+    float: left;
+}
+
+#impact-container {
     width: 100%;
     height: 40%;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     clear: both;
     /* Clear the float from previous children */
 }
 
-#pie-loading {
+#impact-loading {
     height: 15%;
     width: 100%;
 }
 
-#pie-legends {
+#impact-legends {
     /* height: 90%; */
     width: 100%;
 }
-
-#bipv-model-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    background-color: #E6AB1F;
-}
-
-#solar-panel-model {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    background-color: #E6AB1F;
-}
-
 
 .configuration-primary-dropdown-container {
     position: relative;
     z-index: 10;
     margin: 10px;
-    background-color: rgba(102, 102, 102, 0.05);
+    /* background-color: rgba(102, 102, 102, 0.05); */
 }
 
 .configuration-secondary-dropdown-container {
     position: relative;
     z-index: 10;
     margin: 10px;
-    background-color: rgba(102, 102, 102, 0.05);
+    /* background-color: rgba(102, 102, 102, 0.05); */
 }
-
-/* #bipv-type-selection {
-    float: left;
-    height: 100px;
-} */
-
 
 #bipv-layers-selection {
     overflow: auto;
     /* overflow-y: scroll; */
 }
 
-#configuration-controls {
-    float: left;
-    width: 50%;
-    height: 90%;
-    z-index: 10;
-    overflow: scroll;
+.moduleTypeSelect {
+    font-size: 12px;
+    font-weight: 800;
+
+}
+
+.select-container {
+    font-size: 9px;
+}
+
+.layer-option-select {
+    font-size: 9px;
+}
+
+
+
+.layer-title {
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 0rem;
 }
 
 .layer-container {
     margin-bottom: 5px;
 }
 
-/* .select-container {
-    display: flex;
-} */
+.select-container {
+    margin-bottom: 0rem;
+}
 
 .select-container select {
     margin-right: 1px;
+    margin-bottom: 0rem;
 }
 
-.curve-chart {
 
-    width: 100%;
-    height: 100%;
-
-}
-
-#pie-chart-column {
+#stacked-bar-container {
     float: left;
     width: 90%;
     height: 100%;
 }
 
-.pie-row {
+
+#impact-chart-column {
+    float: left;
+    width: 90%;
+    height: 100%;
+}
+
+.impact-row {
     width: 100%;
     height: 50%;
     position: relative;
 }
 
-.pie-chart-container  {
+.impact-chart-container {
     float: left;
     width: calc(100%/7);
     height: 100%;
     /* background-color: #D95F0D; */
 }
 
-.pie-chart {
+.impact-chart {
     /* float: left; */
     width: 80%;
     height: 80%;
@@ -137,35 +268,8 @@
     /* background-color: #D95F0D; */
 }
 
-#pie-legend-column {
+#impact-legend-column {
     float: left;
     width: 10%;
     height: 100%;
 }
-
-.curve-control-panel {
-    padding: 5px;
-    /* border: 1px solid #ccc; */
-    /* border-radius: 5px; */
-    background-color: #f9f9f9;
-    width: 100px;
-    z-index: 100;
-    position: absolute;
-    right: 0;
-  }
-  
-  .curve-control-panel label {
-    display: block;
-    /* margin-bottom: 10px; */
-  }
-  
-  .curve-control-panel input[type="range"] {
-    width: 100%;
-  }
-  
-  .curve-control-panel output {
-    display: block;
-    /* margin-top: 10px; */
-    font-weight: bold;
-  }
-  

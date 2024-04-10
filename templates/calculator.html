@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parametric LCA</title>
   <link rel="stylesheet" href="{{ url_for('static',     filename='css/app-style.css') }}">
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script src="https://kit.fontawesome.com/c21864d6cc.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <!-- <script src="https://d3js.org/d3-array.v2.min.js"></script> -->
 </head>
 
 <body>
@@ -17,10 +17,11 @@
   {% block content %}
   <div id="app-container">
     <div id="configuration-container" class="chart-container">
+
       <div id="configuration-controls">
         <div id="bipv-type-selection" class="configuration-primary-dropdown-container">
-          <label for="moduleType">Module Type:</label>
-          <select id="moduleType" name="moduleType">
+          <label class="moduleTypeSelect" for="moduleType">Module Type:</label>
+          <select id="moduleType" class="select-container" name="moduleType">
             <option value="monocrystalline">Monocrystalline</option>
             <option value="organic">Organic PV</option>
             <option value="perovskite">Perovskite Silicon</option>
@@ -36,75 +37,89 @@
           </div>
         </div>
       </div>
-      <div id="bipv-model-container">
-        <div id="solar-panel-model">
+      <div id="configured-output-container">
+        <!-- <h5 id="configuration-title">
+          Impact
+        </h5> -->
+        <!-- <p id="configuration-description">
+          Please use the form to the right to configure a BIPV device. For each of the layers that can be found in a
+          generic device there are options. For each of these options you can choose a location specific manufacturing
+          tag. When read, click the reload button to display the percent contribution for multiple impact categories.
+          Using the chart to the right you can analyse the expected performance of your configured device and adjust
+          self consumption within the system as well as the performance ratio. This tool allows you to compare the
+          performance of your device to an electricity grid mix of your choosing. The crossover point of the two black
+          lines then indicates the miminum amoutn of annual irradiance to install this device on.
+        </p> -->
+        <div id="button-container">
+          <button id="download-data" class="app-button" title="DOWNLOAD" onclick="downloadData()">
+            <i class="fa fa-download"></i>
+          </button>
+          <button id="load-impact-charts" class="app-button" title="RELOAD" onclick="createImpactCharts(); displayData()">
+            <i class="fa fa-arrows-rotate"></i>
+          </button>
+        </div>
+
+        <div id="configured-device-results"> 
+          <div id="configured-device-results-inner">
+
+          </div>
         </div>
       </div>
     </div>
     <div id="curve-container" class="chart-container">
       <div class="curve-control-panel">
-        <label for="curve-slider">Self Consumption:</label>
-        <input type="range" id="curve-slider" name="curve-slider" min="0.05" max="0.95" step="0.05">
-        <output id="curve-slider-value">0.50</output>
+        <!-- <div class="curve-control-panel-element">
+          <label for="curve-slider">Self Consumption:</label>
+          <input type="range" id="curve-slider" name="curve-slider" min="0.05" max="0.95" step="0.05">
+          <output id="curve-slider-value">0.50</output>
+        </div> -->
+
+        <div class="curve-control-panel-element">
+          <div class="label-output-container">
+            <label for="curve-slider-self-consumption">Self Consumption:</label>
+            <output class="curve-slider-value" id="curve-slider-self-consumption-value">0.50</output>
+          </div>
+          <input type="range" class="curve-slider" id="curve-slider-self-consumption"
+            name="curve-slider-self-consumption" min="0.05" max="1.00" step="0.05" value="0.50">
+        </div>
+
+        <div class="curve-control-panel-element">
+          <div class="label-output-container">
+            <label for="curve-slider-performance-ratio">Performance Ratio:</label>
+            <output class="curve-slider-value" id="curve-slider-performance-ratio-value">0.75</output>
+          </div>
+          <input type="range" class="curve-slider" id="curve-slider-performance-ratio"
+            name="curve-slider-performance-ratio" min="0.05" max="1.00" step="0.05" value="0.75">
+        </div>
+
+        <div class="curve-control-panel-element">
+          <div class="label-output-container">
+            <label for="curve-slider-grid-mix">Grid Mix:</label>
+            <output class="curve-slider-value" id="curve-slider-grid-mix-value">1.00</output>
+          </div>
+          <input type="range" class="curve-slider" id="curve-slider-grid-mix" name="curve-slider-grid-mix" min="0.00"
+            max="2.00" step="0.05" value="1.00">
+        </div>
+
+        <!-- <div class="curve-control-panel-element">
+          <label for="curve-slider">Grid Mix:</label>
+          <input type="range" id="curve-slider-grid-mix" name="curve-slider-grid-mix" min="0.01"
+            max="2.00" step="0.10">
+          <output id="curve-slider-performance-grid-mix">2.00</output>
+        </div> -->
       </div>
       <div class="curve-chart" id="pv-curve"></div>
     </div>
-    <div id="pie-container" class="chart-container">
-      <div id="pie-chart-column">
-        <div class="pie-row">
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart1-1"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart1-2"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart1-3"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart1-4"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart1-5"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart1-6"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart1-7"></div>
-          </div>
-        </div>
+    <div id="impact-container" class="chart-container">
+      <div id="stacked-bar-container">
 
-        <div class="pie-row">
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart2-1"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart2-2"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart2-3"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart2-4"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart2-5"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart2-6"></div>
-          </div>
-          <div class="pie-chart-container">
-            <div class="pie-chart" id="chart2-7"></div>
-          </div>
-        </div>
       </div>
-      <div id="pie-legend-column">
-        <div id="pie-loading" onclick="createPieCharts();createLineChart();">
-          <button id="load-pie-charts"> RELOAD </button>
+      <div id="impact-legend-column">
+        <div id="impact-loading">
+
 
         </div>
-        <div id="pie-legends">
+        <div id="impact-legends">
         </div>
       </div>
 
