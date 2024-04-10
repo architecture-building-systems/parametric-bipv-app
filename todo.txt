@@ -7,6 +7,8 @@
     	- add inverter choice
 	- add bypass diodes
 - Carbon curve  
+		- when the performance ratio slider is changed the entire graph needs to update 
+			- move the area and black curve simultanesously
     	- Update to be sensitive to the changes made in the layers
     	- Add performance ratio as a control 
     	- show regional grid mixes and their aligning x values
