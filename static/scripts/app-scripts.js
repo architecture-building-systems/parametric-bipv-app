@@ -1,4 +1,3 @@
-
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -56,9 +55,7 @@ function createLayerSelections(layers) {
         const optionSelect = document.createElement('select');
         optionSelect.setAttribute("id", layer.title);
         optionSelect.setAttribute("class", "layer-option-select");
-        // optionSelect.addEventListener('change', function () {
-        //     // logSelect(this);
-        // });
+
         Object.keys(layer.options).forEach(option => {
             const optionElement = document.createElement('option');
             optionElement.value = option;
@@ -85,10 +82,17 @@ function createLayerSelections(layers) {
 
         // Trigger change event initially to populate regions for the first option
         optionSelect.dispatchEvent(new Event('change'));
+        
+        optionSelect.addEventListener('change', createImpactCharts)
+        regionSelect.addEventListener('change', createImpactCharts)
+        
+        optionSelect.addEventListener('change', displayData)
+        regionSelect.addEventListener('change', displayData)
 
         layerContainer.appendChild(selectContainer);
         container.appendChild(layerContainer);
     });
+    document.getElementById("rear_cover").dispatchEvent(new Event('change'));
 };
 
 // var initialLayers = layerJson[moduleTypeSelect]
@@ -937,6 +941,7 @@ function displaySums(inputData) {
 function populateTableWithD3(data, targetID) {
     // Select the div where the table will be created
     const div = d3.select(`#${targetID}`);
+    document.getElementById(targetID).innerHTML = "";
 
     // Create a table and append it to the div
     const table = div.append('table');

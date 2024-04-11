@@ -1,26 +1,23 @@
-04.04.2024
+11.04.2024
 - General 	
-    	- Add some way of seeing the absolute valeus for configured device
-    	- remove 3D model element 
-    	- add a download function to get the configured device and chart data
+	- add the layers chosen as a row in the downloaded csv
     	- add system size
     	- add inverter choice
 	- add bypass diodes
 - Carbon curve  
-		- when the performance ratio slider is changed the entire graph needs to update 
-			- move the area and black curve simultanesously
     	- Update to be sensitive to the changes made in the layers
-    	- Add performance ratio as a control 
-    	- show regional grid mixes and their aligning x values
+    	- indicate crossover of grid mix and curve on x
     	- Adapt to be the other impacts
-    	- add explainer about the threshhold value
    	- fix the alignments
-	- y locator
-	- Add hovers "?"
-- Pie charts
-   	- change these to stacked bars?
+	- change y-axis upper limit to 1.5
+	- hover information 
+		- add explainer about the threshold value
+		- general information about the chart and calculation 
+- Stacked charts
+   	- add a switch to show the absolute value instead of percent
+	- fix the label alignment across browsers
+	- when hovering over stacked section highlight
 - CSS and Style
-	- manage the style of the selects
 	- coordinate the fonts
 	- clean the labels 
 
