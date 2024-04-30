@@ -625,7 +625,7 @@ async function JSONtoLineChart() {
     var lossFactor = parseFloat([1 - parseFloat(document.getElementById("curve-slider-performance-ratio").value)]);
     try {
         // const response = await fetch(filePath);
-        d3.json("static/data/sample_curves_all.json").then(function (d) {
+        d3.json("static/data/static_curve_data.json").then(function (d) {
             createLineChart('pv-curve', d[deviceTypeSelect.value], lossFactor);
         })
     } catch (error) {
@@ -641,7 +641,7 @@ moduleTypeSelect.addEventListener('change', JSONtoLineChart);
 
 // When Self consumption is shift move the black line
 document.getElementById('curve-slider-self-consumption').addEventListener('change', function () {
-    d3.json("static/data/sample_curves_all.json").then(function (d) {
+    d3.json("static/data/static_curve_data.json").then(function (d) {
         var deviceTypeSelect = document.getElementById('moduleType');
         var curveData = d[deviceTypeSelect.value]
 
@@ -696,7 +696,7 @@ document.getElementById('curve-slider-self-consumption').addEventListener('chang
 
 // When performance ratio is adjuste move the black line and the fill
 document.getElementById('curve-slider-performance-ratio').addEventListener('change', function () {
-    d3.json("static/data/sample_curves_all.json").then(function (d) {
+    d3.json("static/data/static_curve_data.json").then(function (d) {
         var deviceTypeSelect = document.getElementById('moduleType');
         var curveData = d[deviceTypeSelect.value]
 
@@ -778,7 +778,7 @@ document.getElementById('curve-slider-performance-ratio').addEventListener('chan
 
 // When Grid mix is shifted move the line
 document.getElementById('curve-slider-grid-mix').addEventListener('change', function () {
-    d3.json("static/data/sample_curves_all.json").then(function (d) {
+    d3.json("static/data/static_curve_data.json").then(function (d) {
         var deviceTypeSelect = document.getElementById('moduleType');
         var curveData = d[deviceTypeSelect.value]
 
