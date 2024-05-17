@@ -6,7 +6,7 @@ function capitalizeFirstLetter(string) {
 const moduleTypeSelect = document.getElementById('moduleType');
 
 const unitDict = {'climate change': 'kg CO2-Eq / sqm.',
-        'energy resources: non-renewable, fossil': 'kg oil-Eq / sqm.',
+        'energy resources: non-renewable, fossil': 'MJ / sqm.',
         'ozone depletion': 'kg CFC-11-Eq / sqm.',
         'acidification: terrestrial': 'kg SO2-Eq / sqm.',
         'photochemical oxidant formation: human health': 'kg NOx-Eq / sqm.',
@@ -844,8 +844,7 @@ document.getElementById('curve-slider-grid-mix').addEventListener('change', func
 
 function downloadCSV(inputData) {
     var arrayOfArrays = Object.keys(inputData).map((key) => [key, inputData[key]]);
-    console.log(arrayOfArrays)
-
+    var deviceName = document.getElementById("moduleType").value
     // Extract unique keys for columns
     const keys = new Set();
     arrayOfArrays.forEach(arr => {
@@ -873,7 +872,7 @@ function downloadCSV(inputData) {
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const tempLink = document.createElement('a');
     tempLink.href = URL.createObjectURL(blob);
-    tempLink.setAttribute('download', 'data.csv');
+    tempLink.setAttribute('download', deviceName+'_impact_data.csv');
     document.body.appendChild(tempLink);
     tempLink.click();
     document.body.removeChild(tempLink);

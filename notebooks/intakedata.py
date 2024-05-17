@@ -80,7 +80,7 @@ class Naming:
             ],
             [
                 "fossil resource use", 
-                "kg oil-Eq / sqm.", 
+                "MJ / sqm.", 
                 "energy resources: non-renewable, fossil"
             ],
             [
