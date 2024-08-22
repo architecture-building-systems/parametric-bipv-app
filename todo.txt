@@ -20,5 +20,8 @@
 - CSS and Style
 	- coordinate the fonts
 	- clean the labels 
-- Check the reporting units
+- Check the reporting units (22 May 2024 done)
+- OPV encapsulation option is only PET
+- When downloading the csv add a text file with the configuration options as well
+
 

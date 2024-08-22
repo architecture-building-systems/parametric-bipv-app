@@ -15,10 +15,10 @@ def pv_watts_method(G_eff, T_cell, P_ref, gamma, T_ref=25, G_ref=1000):
     if gamma < -0.02:
         gamma = gamma / 100
 
-    if G_eff > 125:
-        P_mp = (G_eff / G_ref) * P_ref * (1 + gamma * (T_cell - T_ref))
-    else:
-        P_mp = ((0.008 * G_eff**2) / G_ref) * P_ref * (1 + gamma * (T_cell - T_ref))
+    # if G_eff > 125:
+    #     P_mp = (G_eff / G_ref) * P_ref * (1 + gamma * (T_cell - T_ref))
+    # else:
+    P_mp = ((0.008 * G_eff**2) / G_ref) * P_ref * (1 + gamma * (T_cell - T_ref))
     return P_mp
 
 

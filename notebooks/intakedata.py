@@ -75,71 +75,71 @@ class Naming:
         self.impact_metadata = [
             [
                 "climate change", 
-                "kg CO2-Eq / sqm.", 
+                "kg CO2-Eq / sqm.", # good
                 "climate change"
             ],
             [
                 "fossil resource use", 
-                "MJ / sqm.", 
+                "MJ / sqm.", # good 
                 "energy resources: non-renewable, fossil"
             ],
             [
-                "ozone depletion", 
-                "kg CFC-11-Eq / sqm.", 
+                "ozone depletion", #stratospheric 
+                "kg CFC-11-Eq / sqm.", # good 
                 "ozone depletion"],
             [
                 "terrestrial acidification",
-                "kg SO2-Eq / sqm.",
+                "kg SO2-Eq / sqm.",  # good
                 "acidification: terrestrial",
             ],
             [
                 "human health photochemical",
-                "kg NOx-Eq / sqm.",
+                "kg NOx-Eq / sqm.", # good
                 "photochemical oxidant formation: human health",
             ],
             [
                 "terrestrial photochemical oxidant",
-                "kg NOx-Eq / sqm.",
+                "kg NOx-Eq / sqm.", # good
                 "photochemical oxidant formation: terrestrial ecosystems",
             ],
             [
                 "freshwater ecotoxicity",
-                "kg 1,4-DCB-Eq / sqm.",
+                "kg 1,4-DCB-Eq / sqm.",  # good
                 "ecotoxicity: freshwater",
             ],
             [
                 "particulate matter formation",
-                "kg PM2.5-Eq / sqm.",
+                "kg PM2.5-Eq / sqm.", # good
                 "particulate matter formation",
             ],
             [
                 "freshwater eutrophication",
-                "kg P-Eq / sqm.",
+                "kg P-Eq / sqm.",  # good
                 "eutrophication: freshwater",
             ],
             [
                 "marine eutrophication", 
-                "kg N-Eq / sqm.", 
+                "kg N-Eq / sqm.", # good
                 "eutrophication: marine"
             ],
             [
                 "ionising radiation", 
-                "kg Co-60-Eq / sqm.", 
+                "kBg Co-60-Eq / sqm.", #kBq emitted to air equivalent (kilo-Becquerel)
                 "ionising radiation"
             ],
             [
                 "non-carcinogenic",
-                "(HTPnc) kg 1,4-DCB-Eq",
+                "(HTPnc) kg 1,4-DCB-Eq / sqm.", # good
                 "human toxicity: non-carcinogenic",
             ],
             [
                 "human toxicity: carcinogenic", 
-                "(HTPc) kg 1,4-DCB-Eq", 
+                "(HTPc) kg 1,4-DCB-Eq / sqm.", # good
                 "human toxicity: carcinogenic"
             ],
             [
                 "land use", 
-                "sqm. land / sqm.", 
+                "sqm. land / sqm.", # good (sqm land for crop use and relaxation) 
                 "land use"
             ],
         ]

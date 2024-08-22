@@ -17,23 +17,31 @@
   {% block content %}
   <div id="app-container">
     <div id="configuration-container" class="chart-container">
-
       <div id="configuration-controls">
-        <div id="bipv-type-selection" class="configuration-primary-dropdown-container">
-          <label class="moduleTypeSelect" for="moduleType">Module Type:</label>
-          <select id="moduleType" class="select-container" name="moduleType">
-            <option value="monocrystalline">Monocrystalline</option>
-            <option value="organic">Organic PV</option>
-            <option value="perovskite">Perovskite Silicon</option>
-            <option value="polycrystalline">Polycrystalline</option>
-            <option value="cdte">CdTe</option>
-            <option value="cigs">CIGS</option>
-          </select>
-
+        <div class="panel-header">
+          <div class="info-button" id="configuration-controls-info"></div>
+          <div id="configuration-controls-popup">Use this form to select the layers of a theoretical PV module. For each
+            option there is a selection of layer options on the left and the location which it originates from on the
+            right.
+          </div>
         </div>
-        <div id="bipv-layers-selection" class="configuration-secondary-dropdown-container">
-          <div id="layer-selects-container">
-            <!-- Dynamic <select> elements for each layer will be appended here by JavaScript -->
+        <div class="panel-body">
+          <div id="bipv-type-selection" class="configuration-primary-dropdown-container">
+            <label class="moduleTypeSelect" for="moduleType">Module Type:</label>
+            <select id="moduleType" class="select-container" name="moduleType">
+              <option value="monocrystalline">Monocrystalline</option>
+              <option value="organic">Organic PV</option>
+              <option value="perovskite">Perovskite Silicon</option>
+              <option value="polycrystalline">Polycrystalline</option>
+              <option value="cdte">CdTe</option>
+              <option value="cigs">CIGS</option>
+            </select>
+          </div>
+
+          <div id="bipv-layers-selection" class="configuration-secondary-dropdown-container">
+            <div id="layer-selects-container">
+              <!-- Dynamic <select> elements for each layer will be appended here by JavaScript -->
+            </div>
           </div>
         </div>
       </div>
@@ -54,14 +62,22 @@
           <button id="download-data" class="app-button" title="DOWNLOAD" onclick="downloadData()">
             <i class="fa fa-download"></i>
           </button>
-          <button id="load-impact-charts" class="app-button" title="RELOAD" onclick="createImpactCharts(); displayData()">
+          <button id="load-impact-charts" class="app-button" title="RELOAD"
+            onclick="createImpactCharts(); displayData()">
             <i class="fa fa-arrows-rotate"></i>
           </button>
         </div>
 
-        <div id="configured-device-results"> 
-          <div id="configured-device-results-inner">
+        <div id="configured-device-results">
+          <div class="panel-header">
+            <div class="info-button" id="configured-device-info"></div>
+            <div id="configured-device-popup">This table displays the calculated impact values.
+            </div>
+          </div>
+          <div class="panel-body">
+            <div id="configured-device-results-inner">
 
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +110,7 @@
 
         <div class="curve-control-panel-element">
           <div class="label-output-container">
-            <label for="curve-slider-grid-mix">Grid Mix:</label>
+            <label for="curve-slider-grid-mix">Grid Emissions:</label>
             <output class="curve-slider-value" id="curve-slider-grid-mix-value">1.00</output>
           </div>
           <input type="range" class="curve-slider" id="curve-slider-grid-mix" name="curve-slider-grid-mix" min="0.00"
